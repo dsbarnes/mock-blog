@@ -13,11 +13,8 @@ article#articleSmall:hover{
 
 img#articleSmallImg{
   border: 1px solid purple;
-  margin-right: 5%;
-}
-
-div#titleDate{
-  max-width: 45%;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 div#titleDate h1{
@@ -26,9 +23,15 @@ div#titleDate h1{
 }
 
 p#articleShort{
-  margin-bottom: 10%;
+  margin-bottom: 20px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
 }
+
+p.specialPositionSmall{
+  position: relative;
+  bottom: 15px;
+}
+

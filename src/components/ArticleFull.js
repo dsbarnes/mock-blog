@@ -1,42 +1,44 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import MenuBar from './MenuBar'
 import './stylesheets/ArticleFull.css'
 
-function ArticleFull(
-  //Don't freak, just split the line
-  //to see all the destructured bits of props.
-  { image, title, date, content, category }) {
+
+function ArticleFull(props) {
   return (
     <React.Fragment>
+      <MenuBar />
 
+      {props.article.map(article => (
+        <article id='articleFull'>
 
-      <article id='articleFull'>
-        <img id='articleFullImg'
-          alt="todo"
-          style={{
-            height: 240 + 'px',
-            width: 750 + 'px',
-            border: 1 + 'px solid blue',
-          }}
-          src={image}>
-        </img>
+          <Link to={`/blog/category/${article.category}`}>
+            <img id='articleFullImg'
+              alt="todo"
+              style={{
+                border: 1 + 'px solid blue',
+              }}
+              src={article.image}>
+            </img>
+          </Link>
 
-        <h1 id='articleFullTitle'>{title}</h1>
+          <h1 id='articleFullTitle'>{article.title}</h1>
 
-        <p className='articleFullSpecialPosition'>
-          <small><span className='color'>Category: </span>
-            {category}</small></p>
+          <p className='articleFullSpecialPosition'>
+            <small><i><span className='color'>Posted: </span>
+              {article.date}</i></small></p>
 
-        <p className='articleFullSpecialPosition'>
-          <small><i><span className='color'>Posted: </span>
-            {date}</i></small></p>
+          {
+            article.content.map(text => (
+              text.text ?
+                (<p id='articleFullP'>{text.text}</p>) :
+                (<pre id='articleFullCode'>{text.code}</pre>)
+            ))
+          }
 
-        {content.map(text => (
-          text.text ?
-            (<p id='articleFullP'>{text.text}</p>) :
-            (<pre id='articleFullCode'>{text.code}</pre>)
-
-        ))}
-      </article>
+        </article>
+      ))
+      }
     </React.Fragment >
   );
 }
