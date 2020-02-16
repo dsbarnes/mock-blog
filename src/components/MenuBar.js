@@ -2,7 +2,7 @@ import React from 'react';
 import './stylesheets/MenuBar.css'
 import { Link } from 'react-router-dom'
 
-function MenuBar() {
+function MenuBar({ setSingleArticle }) {
   return (
     <nav id='container'>
 
@@ -13,11 +13,23 @@ function MenuBar() {
       </h1>
 
       <div id="navLinks">
-        <Link to='/blog'><p className='navItem'>Blog</p></Link>
+        <Link to='/blog'>
+          <p
+            className='navItem'
+            onClick={
+              //Didn't want to drill props,
+              //So when the function isn't passed,
+              //then don't use it, return.
+              setSingleArticle ?
+                () => setSingleArticle([]) :
+                () => { return }
+            }
+          >Blog</p>
+        </Link>
         <Link to='/about'><p className='navItem'>About</p></Link>
       </div>
 
-    </nav>
+    </nav >
   );
 }
 

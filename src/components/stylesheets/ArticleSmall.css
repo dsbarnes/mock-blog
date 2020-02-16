@@ -1,4 +1,4 @@
-article#article{
+article#articleSmall{
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -7,11 +7,11 @@ article#article{
   margin-bottom: 2%;
   max-width: 750px;
 }
-article#article:hover{
+article#articleSmall:hover{
   box-shadow: 0px 1px 10px 0px silver;
 }
 
-img{
+img#articleSmallImg{
   border: 1px solid purple;
   margin-right: 5%;
 }
@@ -19,13 +19,10 @@ img{
 div#titleDate{
   max-width: 45%;
 }
+
 div#titleDate h1{
   font-size: 20px;
   font-weight: lighter;
-}
-div#titleDate small{
-  position: relative;
-  bottom: 10px;
 }
 
 p#articleShort{

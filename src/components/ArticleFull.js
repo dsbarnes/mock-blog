@@ -1,6 +1,5 @@
 import React from 'react';
-// import './stylesheets/ArticleSmall.css'
-import { Link } from 'react-router-dom'
+import './stylesheets/ArticleFull.css'
 
 function ArticleFull(
   //Don't freak, just split the line
@@ -8,23 +7,37 @@ function ArticleFull(
   { image, title, date, content, category }) {
   return (
     <React.Fragment>
-      <article id='article'>
-        <img
+
+
+      <article id='articleFull'>
+        <img id='articleFullImg'
           alt="todo"
-          // style={{
-          //   height: 165 + 'px',
-          //   width: 280 + 'px'
-          // }}
-          src={image}></img>
+          style={{
+            height: 240 + 'px',
+            width: 750 + 'px',
+            border: 1 + 'px solid blue',
+          }}
+          src={image}>
+        </img>
 
-        <div id="titleDate">
-          <h1>{title}</h1>
-          <p><small><i>{date}</i></small></p>
-        </div>
+        <h1 id='articleFullTitle'>{title}</h1>
 
-        <p id='articleContent'>{content}</p>
+        <p className='articleFullSpecialPosition'>
+          <small><span className='color'>Category: </span>
+            {category}</small></p>
+
+        <p className='articleFullSpecialPosition'>
+          <small><i><span className='color'>Posted: </span>
+            {date}</i></small></p>
+
+        {content.map(text => (
+          text.text ?
+            (<p id='articleFullP'>{text.text}</p>) :
+            (<pre id='articleFullCode'>{text.code}</pre>)
+
+        ))}
       </article>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 

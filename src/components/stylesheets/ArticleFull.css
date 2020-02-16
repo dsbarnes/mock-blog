@@ -1,0 +1,33 @@
+article#articleFull{
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#articleFullImg{}
+
+h1#articleFullTitle{
+  font-size: 28px;
+}
+
+p.articleFullSpecialPosition{
+  margin: 0;
+  padding-bottom: 5px;
+  position: relative;
+  bottom: 18px;
+  z-index: 1;
+}
+
+p#articleFullP{
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.5em;
+  /* font-weight: lighter; */
+}
+
+pre#articleFullCode{
+  font-family: monospace;
+  border: 1px solid firebrick;
+}
