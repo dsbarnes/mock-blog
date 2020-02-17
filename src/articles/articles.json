@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "featured": false,
+    "featured": true,
     "category": "JavaScript",
     "title": "Article Title lets see what happens if this gets really long",
     "date": "10-10-1010",
@@ -59,7 +59,7 @@
   },
   {
     "id": 3,
-    "featured": false,
+    "featured": true,
     "category": "Python",
     "title": "Another Three - Testing that menue hovers correctly",
     "date": "10-12-1010",

@@ -31,6 +31,7 @@ function App() {
                 articles={articles}
                 setSingleArticle={setSingleArticle}
                 setCategory={setCategory}
+              // articleToSingle={singleArticle}
               />
             )} />
 
