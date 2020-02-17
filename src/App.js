@@ -25,7 +25,14 @@ function App() {
       <Router>
         <Switch>
 
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact
+            render={() => (
+              <Home
+                articles={articles}
+                setSingleArticle={setSingleArticle}
+                setCategory={setCategory}
+              />
+            )} />
 
           <Route path='/blog' exact
             render={() => (
@@ -42,6 +49,7 @@ function App() {
             render={() => (
               <ArticleFull
                 article={singleArticle}
+                articles={articles}
                 setCategory={setCategory}
               />
             )}
@@ -55,6 +63,10 @@ function App() {
                 setCategory={setCategory}
               />
             )}
+          />
+
+          <Route path='/:always_error' exact
+            render={() => <h1>Hello from what will be the error page</h1>}
           />
 
         </Switch>
