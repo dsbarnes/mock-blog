@@ -48,6 +48,7 @@ function App() {
           <Route path='/blog/category/:category' exact
             render={() => (
               <Category
+                articles={articles}
                 category={category}
                 setSingleArticle={setSingleArticle}
                 setCategory={setCategory}

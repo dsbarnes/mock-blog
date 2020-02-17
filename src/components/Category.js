@@ -3,7 +3,10 @@ import MenuBar from './MenuBar'
 import ArticleSmall from './ArticleSmall'
 import './stylesheets/Category.css'
 
-function Category({ category, setSingleArticle, setCategory }) {
+function Category(
+  { articles, category,
+    setSingleArticle, setCategory }) {
+
   return (
     <React.Fragment>
       <MenuBar />
@@ -22,11 +25,11 @@ function Category({ category, setSingleArticle, setCategory }) {
         ) : (
             category.map(article => (
               <ArticleSmall
-                setSingleArticle={setSingleArticle}
                 setCategory={setCategory}
+                setSingleArticle={setSingleArticle}
                 articleToSingle={article}
+                articles={articles}
                 key={article.id}
-                image={article.image}
                 title={article.title}
                 category={article.category}
                 date={article.date}

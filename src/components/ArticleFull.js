@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import MenuBar from './MenuBar'
-import articles from '../articles/articles'
 import './stylesheets/ArticleFull.css'
 
-function ArticleFull({ article, setCategory }) {
-  const { image, category, title, date, content } = article[0]
+function ArticleFull({ article }) {
+  const { category, title, date, content } = article[0]
 
   return (
     <React.Fragment>
@@ -25,9 +23,9 @@ function ArticleFull({ article, setCategory }) {
           article.map(article => (
             <article id='articleFull'>
 
-              {category === 'JavaScript' && <i class="fab fa-js-square fa-4x"></i>}
-              {category === 'Python' && <i class="fab fa-python fa-4x"></i>}
-              {category === 'env' && <i class="fab fa-laptop-code fa-4x"></i>}
+              {category === 'JavaScript' && <i className="fab fa-js-square fa-4x"></i>}
+              {category === 'Python' && <i className="fab fa-python fa-4x"></i>}
+              {category === 'env' && <i className="fab fa-laptop-code fa-4x"></i>}
 
               <h1 id='articleFullTitle'>{title}</h1>
 

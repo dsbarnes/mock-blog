@@ -1,13 +1,13 @@
 import React from 'react';
-//Because I need ALL the articles, not just the one
-//Could pass this from state
-import articles from '../articles/articles'
+// //Because I need ALL the articles, not just the one
+// //Could pass this from state
+// import articles from '../articles/articles'
 import './stylesheets/ArticleSmall.css'
 import { Link } from 'react-router-dom'
 
 function ArticleSmall(
   { setSingleArticle, articleToSingle, setCategory,
-    image, title, category, date, short }) {
+    articles, title, category, date, short }) {
   return (
     <React.Fragment>
 
@@ -17,15 +17,15 @@ function ArticleSmall(
 
           {category === 'JavaScript' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
-            class="fab fa-js-square fa-3x"></i>}
+            className="fab fa-js-square fa-3x"></i>}
 
           {category === 'Python' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
-            class="fab fa-python fa-3x"></i>}
+            className="fab fa-python fa-3x"></i>}
 
           {category === 'env' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
-            class="fab fa-laptop-code fa-3x"></i>}
+            className="fab fa-laptop-code fa-3x"></i>}
         </Link>
 
         <div id="titleDate">
