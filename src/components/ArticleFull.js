@@ -4,6 +4,8 @@ import './stylesheets/ArticleFull.css'
 
 function ArticleFull({ article }) {
   const { category, title, date, content } = article[0]
+  localStorage.setItem('dsBarnesBlogArticle', JSON.stringify(article[0]))
+
 
   return (
     <React.Fragment>

@@ -7,6 +7,8 @@ function Category(
   { articles, category,
     setSingleArticle, setCategory }) {
 
+  localStorage.setItem('dsBarnesBlogCategory', JSON.stringify(category))
+
   return (
     <React.Fragment>
       <MenuBar />

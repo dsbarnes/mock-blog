@@ -13,10 +13,12 @@ import Category from './components/Category'
 
 function App() {
 
-  const [singleArticle, setSingleArticle] = useState([
-    { 'category': '', 'image': '', 'title': '', 'date': '', 'content': [] }
-  ])
-  const [category, setCategory] = useState([])
+  const [singleArticle, setSingleArticle] = useState(
+    [JSON.parse(localStorage.getItem('dsBarnesBlogArticle'))] || []
+  )
+  const [category, setCategory] = useState(
+    JSON.parse(localStorage.getItem('dsBarnesBlogCategory')) || []
+  )
 
   return (
     <React.Fragment>
@@ -48,7 +50,6 @@ function App() {
           <Route path='/blog/category/:category' exact
             render={() => (
               <Category
-                articles={articles}
                 category={category}
                 setSingleArticle={setSingleArticle}
                 setCategory={setCategory}

@@ -15,7 +15,7 @@ function Blog({ articles, setSingleArticle, setCategory }) {
             setSingleArticle={setSingleArticle}
             setCategory={setCategory}
             articleToSingle={article}
-            key={article.id}
+            articles={articles}
             image={article.image}
             title={article.title}
             category={article.category}

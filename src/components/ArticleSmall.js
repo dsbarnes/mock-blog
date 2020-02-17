@@ -26,6 +26,7 @@ function ArticleSmall(
           {category === 'env' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
             className="fab fa-laptop-code fa-3x"></i>}
+
         </Link>
 
         <div id="titleDate">
