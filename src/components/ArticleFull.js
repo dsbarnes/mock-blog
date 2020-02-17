@@ -25,17 +25,9 @@ function ArticleFull({ article, setCategory }) {
           article.map(article => (
             <article id='articleFull'>
 
-              <Link to={`/blog/category/${article.category}`}>
-                <img id='articleFullImg'
-                  alt="todo"
-                  style={{ border: 1 + 'px solid blue' }}
-                  src={image}
-                  onClick={() => (
-                    setCategory(
-                      articles.filter(article => article.category === category)
-                    ))}>
-                </img>
-              </Link>
+              {category === 'JavaScript' && <i class="fab fa-js-square fa-4x"></i>}
+              {category === 'Python' && <i class="fab fa-python fa-4x"></i>}
+              {category === 'env' && <i class="fab fa-laptop-code fa-4x"></i>}
 
               <h1 id='articleFullTitle'>{title}</h1>
 

@@ -7,21 +7,17 @@ article#articleFull{
   margin-top: 120px;
 }
 
-#articleFullImg{}
-
 h1#articleFullTitle{
   font-size: 28px;
   display: inline-block;
-  margin-left: 5%;
   max-width: 85%;
 }
 
 p.articleFullSpecialPosition{
   margin: 0;
-  /* padding-bottom: 5px; */
   position: relative;
   bottom: 18px;
-  left: 90px;
+  left: 75px;
   
 }
 
@@ -29,7 +25,6 @@ p#articleFullP{
   text-align: justify;
   font-size: 18px;
   line-height: 1.5em;
-  /* font-weight: lighter; */
 }
 
 pre#articleFullCode{

@@ -1,5 +1,7 @@
 import React from 'react';
-import articles from '../articles/articles' //Because I need ALL the articles, not just the one
+//Because I need ALL the articles, not just the one
+//Could pass this from state
+import articles from '../articles/articles'
 import './stylesheets/ArticleSmall.css'
 import { Link } from 'react-router-dom'
 
@@ -10,14 +12,20 @@ function ArticleSmall(
     <React.Fragment>
 
       <article id='articleSmall'>
+        {/* There must be a better way... */}
         <Link to={`/blog/category/${category}`}>
-          <img id='articleSmallImg'
-            alt="todo"
-            onClick={() => setCategory(
-              articles.filter(article => article.category === category)
-            )}
-            src={image}>
-          </img>
+
+          {category === 'JavaScript' && <i
+            onClick={() => setCategory(articles.filter(article => article.category === category))}
+            class="fab fa-js-square fa-3x"></i>}
+
+          {category === 'Python' && <i
+            onClick={() => setCategory(articles.filter(article => article.category === category))}
+            class="fab fa-python fa-3x"></i>}
+
+          {category === 'env' && <i
+            onClick={() => setCategory(articles.filter(article => article.category === category))}
+            class="fab fa-laptop-code fa-3x"></i>}
         </Link>
 
         <div id="titleDate">

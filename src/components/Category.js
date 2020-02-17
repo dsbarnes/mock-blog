@@ -14,7 +14,7 @@ function Category({ category, setSingleArticle, setCategory }) {
             <h1>Oh no!</h1>
             <br />
             <p>If you attempted to access a page by using the address bar,</p>
-            <p>please navigate to the blog and find the article there.</p>
+            <p>please navigate to the blog and find the category there.</p>
             <br />
             <p>If you got here some other way,</p>
             <p>it's most likely this page doesn't exist.</p>
