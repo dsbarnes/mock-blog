@@ -1,11 +1,10 @@
 import React from 'react'
-// import articles from '../articles/articles'
 import MenuBar from './MenuBar'
 import ArticleSmall from './ArticleSmall'
 
 
 
-function Blog({ articles, setSingleArticle }) {
+function Blog({ articles, setSingleArticle, setCategory }) {
   return (
     <React.Fragment>
       <MenuBar />
@@ -14,6 +13,7 @@ function Blog({ articles, setSingleArticle }) {
         {articles.map(article => (
           <ArticleSmall
             setSingleArticle={setSingleArticle}
+            setCategory={setCategory}
             articleToSingle={article}
             key={article.id}
             image={article.image}

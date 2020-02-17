@@ -2,7 +2,7 @@
   {
     "id": 1,
     "featured": false,
-    "category": "test",
+    "category": "JavaScript",
     "title": "Article Title lets see what happens if this gets really long",
     "date": "10-10-1010",
     "image": "*",
@@ -27,6 +27,8 @@
   },
   {
     "id": 2,
+    "featured": false,
+    "category": "Python",
     "title": "Another Title",
     "date": "10-12-1010",
     "image": "*",
@@ -57,6 +59,8 @@
   },
   {
     "id": 3,
+    "featured": false,
+    "category": "Python",
     "title": "Another Three - Testing that menue hovers correctly",
     "date": "10-12-1010",
     "image": "*",
