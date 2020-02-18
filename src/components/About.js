@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuBar from './MenuBar'
+import text from '../articles/about'
 import './stylesheets/About.css'
 
 function About() {
@@ -7,7 +8,10 @@ function About() {
     <React.Fragment>
       <MenuBar />
       <div id='aboutContiner'>
-        <p>Hello from About.js</p>
+        <p>{text.sectionOne}</p>
+        <p>{text.sectionTwo}</p>
+        <p>{text.sectionThree}</p>
+        <p>{text.sectionFour}</p>
       </div>
     </React.Fragment >
   )

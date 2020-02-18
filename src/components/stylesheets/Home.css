@@ -4,3 +4,9 @@ div#homeContiner{
   margin-left: auto;
   margin-right: auto;
 }
+p#homeText{
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: 18px;
+  margin-bottom: 50px;
+}

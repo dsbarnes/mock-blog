@@ -1,5 +1,6 @@
-[
-  {
-    "About": "This is where I will write the about page."
-  }
-]
+{
+  "sectionOne": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit.",
+  "sectionTwo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo.",
+  "sectionThree": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate.",
+  "sectionFour": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis."
+}

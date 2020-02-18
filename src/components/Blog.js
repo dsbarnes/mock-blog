@@ -7,9 +7,11 @@ import ArticleSmall from './ArticleSmall'
 function Blog({ articles, setSingleArticle, setCategory }) {
   return (
     <React.Fragment>
+
       <MenuBar />
 
       <div style={{ marginTop: 120 + 'px' }}>
+
         {articles.map(article => (
           <ArticleSmall
             setSingleArticle={setSingleArticle}
@@ -23,6 +25,7 @@ function Blog({ articles, setSingleArticle, setCategory }) {
             short={article.short}
           />
         ))}
+
       </div>
 
     </React.Fragment>

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 import './App.css'
 import articles from './articles/articles'
-
 import Home from './components/Home'
 import About from './components/About'
 import Blog from './components/Blog'
 import ArticleFull from './components/ArticleFull'
 import Category from './components/Category'
+import ErrorMessge from './components/ErrorMessge'
 
 
 function App() {
@@ -67,7 +66,7 @@ function App() {
           />
 
           <Route path='/:always_error' exact
-            render={() => <h1>Hello from what will be the error page</h1>}
+            render={() => <ErrorMessge />}
           />
 
         </Switch>

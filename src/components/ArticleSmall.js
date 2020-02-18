@@ -1,7 +1,4 @@
 import React from 'react';
-// //Because I need ALL the articles, not just the one
-// //Could pass this from state
-// import articles from '../articles/articles'
 import './stylesheets/ArticleSmall.css'
 import { Link } from 'react-router-dom'
 
@@ -25,7 +22,11 @@ function ArticleSmall(
 
           {category === 'env' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="fab fa-laptop-code fa-3x"></i>}
+            className="fas fa-laptop-code fa-3x"></i>}
+
+          {category === 'Katas' && <i
+            onClick={() => setCategory(articles.filter(article => article.category === category))}
+            className="fas fa-user-ninja fa-3x"></i>}
 
         </Link>
 

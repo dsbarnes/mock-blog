@@ -11,13 +11,7 @@ article#articleSmall:hover{
   box-shadow: 0px 1px 10px 0px silver;
 }
 
-/* img#articleSmallImg{
-  border: 1px solid purple;
-  margin-right: 20px;
-  margin-top: 20px;
-} */
-
-i.fab{
+i.fab, i.fas{
   color: steelblue;
   margin-top: 18px;
   margin-right: 18px;

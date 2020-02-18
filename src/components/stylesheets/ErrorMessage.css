@@ -1,0 +1,11 @@
+div#errorMessage{
+  margin-top:120px;
+  width: 750px;
+  margin-left: auto;
+  margin-right:auto;
+  border: 2px solid firebrick;
+  border-radius: 10px 10px 10px 10px;
+  color: firebrick;
+  text-align: center;
+  padding: 18px;
+}

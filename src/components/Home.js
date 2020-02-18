@@ -5,12 +5,14 @@ import text from '../articles/home'
 import './stylesheets/Home.css'
 
 function Home({ articles, setSingleArticle, setCategory }) {
-  // console.log(articles)
+
   return (
     <React.Fragment>
+
       <MenuBar />
+
       <div id='homeContiner'>
-        <p>{text.home}</p>
+        <p id='homeText'>{text.home}</p>
 
         {articles.map(article => (
           article.featured === true && (
@@ -27,10 +29,11 @@ function Home({ articles, setSingleArticle, setCategory }) {
             />
           )
         ))}
+
       </div>
+
     </React.Fragment >
   )
-
 }
 
 export default Home
