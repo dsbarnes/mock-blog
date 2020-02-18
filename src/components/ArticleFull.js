@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import './stylesheets/ArticleFull.css'
 import MenuBar from './MenuBar'
 import ErrorMessage from './ErrorMessge';
-import './stylesheets/ArticleFull.css'
+import BottomSection from './BottomSection'
 
 function ArticleFull({ article, articles, setCategory }) {
   if (!article[0]) return (<ErrorMessage />)
@@ -50,6 +51,7 @@ function ArticleFull({ article, articles, setCategory }) {
 
         </article>
       ))}
+      <BottomSection />
     </React.Fragment >
   );
 }

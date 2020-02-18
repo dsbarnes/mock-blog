@@ -1,7 +1,8 @@
 import React from 'react'
-import MenuBar from './MenuBar'
-import text from '../articles/about'
 import './stylesheets/About.css'
+import text from '../articles/about'
+import MenuBar from './MenuBar'
+import BottomSection from './BottomSection'
 
 function About() {
   return (
@@ -13,6 +14,7 @@ function About() {
         <p>{text.sectionThree}</p>
         <p>{text.sectionFour}</p>
       </div>
+      <BottomSection />
     </React.Fragment >
   )
 

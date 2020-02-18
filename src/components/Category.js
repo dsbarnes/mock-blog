@@ -3,6 +3,7 @@ import './stylesheets/Category.css'
 import MenuBar from './MenuBar'
 import ArticleSmall from './ArticleSmall'
 import ErrorMessage from './ErrorMessge'
+import BottomSection from './BottomSection'
 
 function Category(
   { articles, category,
@@ -30,6 +31,7 @@ function Category(
           />
         ))}
       </div>
+      <BottomSection />
     </React.Fragment >
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import MenuBar from './MenuBar'
 import ArticleSmall from './ArticleSmall'
+import BottomSection from './BottomSection'
 
 
 
@@ -27,7 +28,7 @@ function Blog({ articles, setSingleArticle, setCategory }) {
         ))}
 
       </div>
-
+      <BottomSection />
     </React.Fragment>
   );
 }

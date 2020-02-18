@@ -3,6 +3,7 @@ import MenuBar from './MenuBar'
 import ArticleSmall from './ArticleSmall'
 import text from '../articles/home'
 import './stylesheets/Home.css'
+import BottomSection from './BottomSection'
 
 function Home({ articles, setSingleArticle, setCategory }) {
 
@@ -29,8 +30,9 @@ function Home({ articles, setSingleArticle, setCategory }) {
             />
           )
         ))}
-
       </div>
+
+      <BottomSection />
 
     </React.Fragment >
   )
