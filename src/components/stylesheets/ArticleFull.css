@@ -13,12 +13,12 @@ h1#articleFullTitle{
   max-width: 85%;
 }
 
-p.articleFullSpecialPosition{
+/* p.articleFullSpecialPosition{
   margin: 0;
   position: relative;
   bottom: 18px;
   left: 75px;
-}
+} */
 
 p#articleFullP{
   text-align: justify;
@@ -28,5 +28,7 @@ p#articleFullP{
 
 pre#articleFullCode{
   font-family: monospace;
-  border: 1px solid firebrick;
+  border: 1px solid steelblue;
+  padding: 10px 15px 10px 15px;
+  background-color: aliceblue;
 }

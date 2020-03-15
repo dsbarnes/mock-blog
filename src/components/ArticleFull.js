@@ -11,6 +11,16 @@ function ArticleFull({ article, articles, setCategory }) {
   const { category, title, date, content } = article[0]
   localStorage.setItem('dsBarnesBlogArticle', JSON.stringify(article[0]))
 
+  const iconStyle = {
+    'position': 'relative',
+    'top': 30 + 'px',
+  }
+  let specialStyle = {
+    'position': 'relative',
+    'margin-left': 75 + 'px',
+    'bottom': 35 + 'px'
+  }
+
   return (
     <React.Fragment>
       <MenuBar />
@@ -24,24 +34,30 @@ function ArticleFull({ article, articles, setCategory }) {
               className="fab fa-js-square fa-4x"></i>}
 
             {category === 'Python' && <i
+              style={iconStyle}
               onClick={() => setCategory(articles.filter(article => article.category === category))}
               className="fab fa-python fa-4x"></i>}
 
             {category === 'env' && <i
+              style={iconStyle}
               onClick={() => setCategory(articles.filter(article => article.category === category))}
-              className="fas fa-laptop-code fa-3x"></i>}
+              className="far fa-folder-open fa-4x"></i>}
 
             {category === 'Katas' && <i
+              style={iconStyle}
               onClick={() => setCategory(articles.filter(article => article.category === category))}
-              className="fas fa-user-ninja fa-3x"></i>}
+              className="fas fa-puzzle-piece fa-4x"></i>}
 
           </Link>
 
           <h1 id='articleFullTitle'>{title}</h1>
 
-          <p className='articleFullSpecialPosition'>
-            <small><i><span className='color'>Posted: </span>
-              {date}</i></small></p>
+          <p style={specialStyle}>
+            <small>
+              <span className='color'><i>Posted: &nbsp;</i></span>
+              <i>{date}</i>
+            </small>
+          </p>
 
           {content.map(text => (
             text.text ?

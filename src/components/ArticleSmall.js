@@ -22,7 +22,7 @@ function ArticleSmall(
 
           {category === 'env' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="fas fa-laptop-code fa-3x"></i>}
+            className="far fa-folder-open fa-3x"></i>}
 
           {category === 'Katas' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
