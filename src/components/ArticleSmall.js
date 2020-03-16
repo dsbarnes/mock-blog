@@ -26,7 +26,7 @@ function ArticleSmall(
 
           {category === 'Katas' && <i
             onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="fas fa-user-ninja fa-3x"></i>}
+            className="fas fa-puzzle-piece fa-3x"></i>}
 
         </Link>
 
