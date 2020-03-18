@@ -5,59 +5,90 @@ import MenuBar from './MenuBar'
 import ErrorMessage from './ErrorMessge';
 import BottomSection from './BottomSection'
 
+//Icons
+import bash from '../static/Bash.svg'
+import cSharp from '../static/CSharp.svg'
+import rust from '../static/Rust.svg'
+import env from '../static/Env.svg'
+import kata from '../static/Kata.svg'
+import javascript from '../static/JavaScript.svg'
+import python from '../static/Python.svg'
+
+console.log(bash)
+
 function ArticleFull({ article, articles, setCategory }) {
   if (!article[0]) return (<ErrorMessage />)
 
   const { category, title, date, content } = article[0]
   localStorage.setItem('dsBarnesBlogArticle', JSON.stringify(article[0]))
 
-  const iconStyle = {
-    'position': 'relative',
-    'top': 30 + 'px',
-  }
-  let specialStyle = {
-    'position': 'relative',
-    'margin-left': 75 + 'px',
-    'bottom': 35 + 'px'
-  }
+  // let specialStyle = {
+  //   'position': 'relative',
+  //   'margin-left': 75 + 'px',
+  //   'bottom': 35 + 'px'
+  // }
 
   return (
     <React.Fragment>
       <MenuBar />
 
+
       {article.map(article => (
         <article id='articleFull'>
-          <Link to={`/blog/category/${category}`}>
+          <div id='articleHead'>
+            <Link to={`/blog/category/${category}`}>
 
-            {category === 'JavaScript' && <i
-              onClick={() => setCategory(articles.filter(article => article.category === category))}
-              className="fab fa-js-square fa-4x"></i>}
+              {category === 'JavaScript' && //<i
+                // onClick={() => setCategory(articles.filter(article => article.category === category))}
+                // className="fab fa-js-square fa-4x"></i>
+                <img
+                  class='largeIcon'
+                  alt='JvaScript Icon'
+                  src={javascript}
+                  onClick={() => setCategory(articles.filter(article => article.category === category))}
+                />
+              }
 
-            {category === 'Python' && <i
-              style={iconStyle}
-              onClick={() => setCategory(articles.filter(article => article.category === category))}
-              className="fab fa-python fa-4x"></i>}
+              {category === 'Python' &&
+                <img
+                  class='largeIcon'
+                  alt='Python Icon'
+                  src={python}
+                  onClick={() => setCategory(articles.filter(article => article.category === category))}
+                />
+              }
 
-            {category === 'env' && <i
-              style={iconStyle}
-              onClick={() => setCategory(articles.filter(article => article.category === category))}
-              className="far fa-folder-open fa-4x"></i>}
+              {category === 'env' &&
+                <img
+                  class='largeIcon'
+                  alt='Gears Icon'
+                  src={env}
+                  onClick={() => setCategory(articles.filter(article => article.category === category))}
+                />
+              }
 
-            {category === 'Katas' && <i
-              style={iconStyle}
-              onClick={() => setCategory(articles.filter(article => article.category === category))}
-              className="fas fa-puzzle-piece fa-4x"></i>}
+              {category === 'Katas' &&
+                <img
+                  class='largeIcon'
+                  alt='erwefs'
+                  src={kata}
+                  onClick={() => setCategory(articles.filter(article => article.category === category))}
+                />
+              }
 
-          </Link>
+            </Link>
+            <div>
+              <h1 id='articleFullTitle'>{title}</h1>
+              <p id='datePosition'>
+                <small>
+                  <span className='color'><i>Posted: &nbsp;</i></span>
+                  <i>{date}</i>
+                </small>
+              </p>
+            </div>
 
-          <h1 id='articleFullTitle'>{title}</h1>
 
-          <p style={specialStyle}>
-            <small>
-              <span className='color'><i>Posted: &nbsp;</i></span>
-              <i>{date}</i>
-            </small>
-          </p>
+          </div>
 
           {content.map(text => (
             text.text ?

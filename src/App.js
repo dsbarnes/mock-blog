@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 import articles from './articles/articles'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './components/Home'
 import About from './components/About'
 import Blog from './components/Blog'
@@ -26,42 +27,60 @@ function App() {
 
           <Route path='/' exact
             render={() => (
-              <Home
-                articles={articles}
-                setSingleArticle={setSingleArticle}
-                setCategory={setCategory}
-              // articleToSingle={singleArticle}
-              />
+              <React.Fragment>
+                <ScrollToTop />
+                <Home
+                  articles={articles}
+                  setSingleArticle={setSingleArticle}
+                  setCategory={setCategory}
+                />
+              </React.Fragment>
             )} />
 
           <Route path='/blog' exact
             render={() => (
-              <Blog
-                articles={[...articles]}
-                setSingleArticle={setSingleArticle}
-                setCategory={setCategory}
-              />
+              <React.Fragment>
+                <ScrollToTop />
+                <Blog
+                  articles={[...articles]}
+                  setSingleArticle={setSingleArticle}
+                  setCategory={setCategory}
+                />
+              </React.Fragment>
             )} />
 
-          <Route path='/about' exact component={About} />
+          <Route path='/about' exact
+            render={() => (
+              <React.Fragment>
+                <ScrollToTop />
+                <About />
+              </React.Fragment>
+            )}
+          />
 
           <Route path='/blog/:title' exact
             render={() => (
-              <ArticleFull
-                article={singleArticle}
-                articles={articles}
-                setCategory={setCategory}
-              />
+              <React.Fragment>
+                <ScrollToTop />
+                <ArticleFull
+                  article={singleArticle}
+                  articles={articles}
+                  setCategory={setCategory}
+                />
+              </React.Fragment>
             )}
           />
 
           <Route path='/blog/category/:category' exact
             render={() => (
-              <Category
-                category={category}
-                setSingleArticle={setSingleArticle}
-                setCategory={setCategory}
-              />
+              <React.Fragment>
+                <ScrollToTop />
+                <Category
+                  category={category}
+                  setSingleArticle={setSingleArticle}
+                  setCategory={setCategory}
+                />
+              </React.Fragment>
             )}
           />
 

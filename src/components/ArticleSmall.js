@@ -2,9 +2,28 @@ import React from 'react';
 import './stylesheets/ArticleSmall.css'
 import { Link } from 'react-router-dom'
 
+//Icons
+import bash from '../static/Bash.svg'
+import cSharp from '../static/CSharp.svg'
+import rust from '../static/Rust.svg'
+import env from '../static/Env.svg'
+import kata from '../static/Kata.svg'
+import javascript from '../static/JavaScript.svg'
+import python from '../static/Python.svg'
+
+
+
 function ArticleSmall(
   { setSingleArticle, articleToSingle, setCategory,
     articles, title, category, date, short }) {
+
+  // For some mysterious reason this does not work in place of the onClick we have now.
+  // Although it should be the same.
+  // const handleClick = (category) => {
+  //   setCategory(articles.filter(article => article.category === category))
+  // }
+
+  const currentPath = window.location.pathname
   return (
     <React.Fragment>
 
@@ -12,21 +31,53 @@ function ArticleSmall(
         {/* There must be a better way... */}
         <Link to={`/blog/category/${category}`}>
 
-          {category === 'JavaScript' && <i
-            onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="fab fa-js-square fa-3x"></i>}
+          {category === 'JavaScript' &&
+            <img
+              class='smallIcon'
+              alt='JavaScript Icon'
+              src={javascript}
+              onClick={() => {
+                !currentPath.includes('category') &&
+                  setCategory(articles.filter(article => article.category === category))
+              }}
+            />
+          }
 
-          {category === 'Python' && <i
-            onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="fab fa-python fa-3x"></i>}
+          {category === 'Python' &&
+            <img
+              class='smallIcon'
+              alt='Python Icon'
+              src={python}
+              onClick={() => {
+                !currentPath.includes('category') &&
+                  setCategory(articles.filter(article => article.category === category))
+              }}
+            />
+          }
 
-          {category === 'env' && <i
-            onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="far fa-folder-open fa-3x"></i>}
+          {category === 'env' &&
+            <img
+              class='smallIcon'
+              alt='Gears Icon'
+              src={env}
+              onClick={() => {
+                !currentPath.includes('category') &&
+                  setCategory(articles.filter(article => article.category === category))
+              }}
+            />
+          }
 
-          {category === 'Katas' && <i
-            onClick={() => setCategory(articles.filter(article => article.category === category))}
-            className="fas fa-puzzle-piece fa-3x"></i>}
+          {category === 'Katas' &&
+            <img
+              class='smallIcon'
+              alt='Puzzle Icon'
+              src={kata}
+              onClick={() => {
+                !currentPath.includes('category') &&
+                  setCategory(articles.filter(article => article.category === category))
+              }}
+            />
+          }
 
         </Link>
 
