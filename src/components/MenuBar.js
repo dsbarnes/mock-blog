@@ -7,7 +7,7 @@ function MenuBar({ setSingleArticle }) {
     <nav id='container'>
 
       <h1 id='name'>
-        <Link to='/'>
+        <Link to='/mock-blog'>
           <span className='color'>D.S.</span> Barnes
         </Link>
       </h1>

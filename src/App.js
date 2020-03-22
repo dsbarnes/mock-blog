@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Switch>
 
-          <Route path='/' exact
+          <Route path='/mock-blog' exact
             render={() => (
               <React.Fragment>
                 <ScrollToTop />
