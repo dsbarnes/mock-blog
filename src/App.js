@@ -10,8 +10,8 @@ import ArticleFull from './components/ArticleFull'
 import Category from './components/Category'
 import ErrorMessge from './components/ErrorMessge'
 
-
 function App() {
+
 
   const [singleArticle, setSingleArticle] = useState(
     [JSON.parse(localStorage.getItem('dsBarnesBlogArticle'))] || []
