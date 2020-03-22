@@ -6,7 +6,7 @@ Suitable for a personal blog, a new site, an artist portfolio, a travel log, or 
 
 
 ## Admin-Panel Extension
-An admin panel for this blog, or for modification, can be found [here]().
+An admin panel for this blog, or for modification, can be found [here](https://github.com/dsbarnes/Admin-Panel).
 
 
 ## Installation
