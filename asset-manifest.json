@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/mock-blog/static/css/main.c9525e03.chunk.css",
-    "main.js": "/mock-blog/static/js/main.e9347251.chunk.js",
-    "main.js.map": "/mock-blog/static/js/main.e9347251.chunk.js.map",
-    "runtime-main.js": "/mock-blog/static/js/runtime-main.e32e9688.js",
-    "runtime-main.js.map": "/mock-blog/static/js/runtime-main.e32e9688.js.map",
-    "static/js/2.c5154df8.chunk.js": "/mock-blog/static/js/2.c5154df8.chunk.js",
-    "static/js/2.c5154df8.chunk.js.map": "/mock-blog/static/js/2.c5154df8.chunk.js.map",
-    "index.html": "/mock-blog/index.html",
-    "precache-manifest.745e2d6c4230dce70a6c628b5e142a7b.js": "/mock-blog/precache-manifest.745e2d6c4230dce70a6c628b5e142a7b.js",
-    "service-worker.js": "/mock-blog/service-worker.js",
-    "static/css/main.c9525e03.chunk.css.map": "/mock-blog/static/css/main.c9525e03.chunk.css.map",
-    "static/js/2.c5154df8.chunk.js.LICENSE.txt": "/mock-blog/static/js/2.c5154df8.chunk.js.LICENSE.txt",
-    "static/media/Bash.svg": "/mock-blog/static/media/Bash.c66e2083.svg",
-    "static/media/CSharp.svg": "/mock-blog/static/media/CSharp.a9c4890c.svg",
-    "static/media/Env.svg": "/mock-blog/static/media/Env.b28354b9.svg",
-    "static/media/JavaScript.svg": "/mock-blog/static/media/JavaScript.90391fdd.svg",
-    "static/media/Kata.svg": "/mock-blog/static/media/Kata.258e95bd.svg",
-    "static/media/Python.svg": "/mock-blog/static/media/Python.9bd9433e.svg",
-    "static/media/Rust.svg": "/mock-blog/static/media/Rust.6aaed72b.svg"
+    "main.css": "/static/css/main.c9525e03.chunk.css",
+    "main.js": "/static/js/main.bbca6b42.chunk.js",
+    "main.js.map": "/static/js/main.bbca6b42.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d7f357ff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d7f357ff.js.map",
+    "static/js/2.c5154df8.chunk.js": "/static/js/2.c5154df8.chunk.js",
+    "static/js/2.c5154df8.chunk.js.map": "/static/js/2.c5154df8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.662f7e6857d5eb000e5f6582eb83ef50.js": "/precache-manifest.662f7e6857d5eb000e5f6582eb83ef50.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c9525e03.chunk.css.map": "/static/css/main.c9525e03.chunk.css.map",
+    "static/js/2.c5154df8.chunk.js.LICENSE.txt": "/static/js/2.c5154df8.chunk.js.LICENSE.txt",
+    "static/media/Bash.svg": "/static/media/Bash.c66e2083.svg",
+    "static/media/CSharp.svg": "/static/media/CSharp.a9c4890c.svg",
+    "static/media/Env.svg": "/static/media/Env.b28354b9.svg",
+    "static/media/JavaScript.svg": "/static/media/JavaScript.90391fdd.svg",
+    "static/media/Kata.svg": "/static/media/Kata.258e95bd.svg",
+    "static/media/Python.svg": "/static/media/Python.9bd9433e.svg",
+    "static/media/Rust.svg": "/static/media/Rust.6aaed72b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e32e9688.js",
+    "static/js/runtime-main.d7f357ff.js",
     "static/js/2.c5154df8.chunk.js",
     "static/css/main.c9525e03.chunk.css",
-    "static/js/main.e9347251.chunk.js"
+    "static/js/main.bbca6b42.chunk.js"
   ]
 }
