@@ -16,7 +16,7 @@ Once complete, run `yarn start` and the site should start locally on port `3000`
 
 
 ## Description
-The site consistes of a home page with 'featured' articles.  
+The site consists of a home page with 'featured' articles.  
 (See either the state or the /src/articles.json for details)  
 
 Clicking my name (D.S. Barnes) will redirect you to the main page.  
