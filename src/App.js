@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 import articles from './articles/articles'
 import ScrollToTop from './components/ScrollToTop'
@@ -22,10 +22,11 @@ function App() {
 
   return (
     <React.Fragment>
-      <Router>
+      {/* <Router> */}
+      <HashRouter basename='/'>
         <Switch>
 
-          <Route path='/mock-blog' exact
+          <Route path='/' exact
             render={() => (
               <React.Fragment>
                 <ScrollToTop />
@@ -89,7 +90,8 @@ function App() {
           />
 
         </Switch>
-      </Router>
+      </HashRouter>
+      {/* </Router> */}
     </React.Fragment>
   );
 }
