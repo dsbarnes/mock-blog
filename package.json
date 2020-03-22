@@ -1,6 +1,6 @@
 {
   "name": "my-blog",
-  "homepage":"https://dsbarnes.github.io/mock-blog/",
+  "homepage":"https://dsbarnes.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
